@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four Winds Media — Bringing Community Back to Local Broadcast</title>
+<meta name="description" content="Four Winds Media purchases and builds TV and radio stations in rural markets, creates original broadcast, digital and social content, and partners with Native American tribes to preserve heritage, music, and art.">
+<style>
+  :root{
+    --navy:#0d2b45;
+    --navy-deep:#081d30;
+    --amber:#e8960f;
+    --amber-dark:#c67a08;
+    --cream:#faf6ef;
+    --ink:#1d2733;
+    --muted:#5b6b7d;
+    --card:#ffffff;
+    --band:#0d2b45;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--navy);line-height:1.2}
+  a{color:inherit}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(8,29,48,.96);backdrop-filter:blur(6px);color:#fff}
+  .nav{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+  .brand{font-family:Georgia,serif;font-size:1.35rem;letter-spacing:.5px}
+  .brand span{color:var(--amber)}
+  .nav-links{display:flex;gap:26px;align-items:center;font-size:.95rem}
+  .nav-links a{text-decoration:none;opacity:.9}
+  .nav-links a:hover{opacity:1;color:var(--amber)}
+  .btn{display:inline-block;background:var(--amber);color:#1a1a1a !important;text-decoration:none;font-weight:600;padding:10px 22px;border-radius:6px;border:none;cursor:pointer;font-size:.95rem}
+  .btn:hover{background:var(--amber-dark)}
+  .btn-outline{background:transparent;color:var(--navy) !important;border:2px solid var(--navy)}
+  .btn-outline:hover{background:var(--navy);color:#fff !important}
+
+  /* Hero */
+  .hero{background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 60%,#134a6b 100%);color:#fff;overflow:hidden}
+  .hero-inner{max-width:1140px;margin:0 auto;padding:84px 24px 72px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .kicker{text-transform:uppercase;letter-spacing:3px;font-size:.78rem;color:var(--amber);font-weight:700;margin-bottom:18px}
+  .hero h1{color:#fff;font-size:3.1rem;margin-bottom:20px;font-weight:700}
+  .hero p.lede{font-size:1.15rem;opacity:.92;max-width:34rem;margin-bottom:30px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-art{border:1px solid rgba(232,150,15,.35);border-radius:14px;overflow:hidden;min-height:340px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+  .hero-art img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block}
+
+  /* Intro / mission */
+  .intro{max-width:820px;margin:0 auto;padding:72px 24px 20px;text-align:center}
+  .intro h2{font-size:2rem;margin-bottom:18px}
+  .intro p{font-size:1.12rem;color:var(--muted)}
+  .intro p strong{color:var(--ink)}
+
+  /* Services grid */
+  .services{max-width:1140px;margin:0 auto;padding:56px 24px 24px}
+  .section-head{text-align:center;margin-bottom:40px}
+  .section-head h2{font-size:2rem;margin-bottom:10px}
+  .section-head p{color:var(--muted);max-width:620px;margin:0 auto}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--card);border-radius:12px;padding:30px 26px;box-shadow:0 6px 22px rgba(13,43,69,.07);border-top:4px solid var(--amber);transition:transform .2s ease,box-shadow .2s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(13,43,69,.12)}
+  .card .icon{font-size:1.7rem;margin-bottom:12px}
+  .card h3{font-size:1.18rem;margin-bottom:10px}
+  .card p{font-size:.97rem;color:var(--muted)}
+
+  /* Tribal band */
+  .band{background:var(--band);color:#fff;margin-top:64px}
+  .band-inner{max-width:960px;margin:0 auto;padding:72px 24px;display:grid;grid-template-columns:1fr 1.4fr;gap:44px;align-items:center}
+  .band h2{color:#fff;font-size:2rem;margin-bottom:6px}
+  .band .kicker{margin-bottom:12px}
+  .band p{opacity:.92;font-size:1.05rem}
+  .band p + p{margin-top:14px}
+  .band-img{border-radius:12px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.4);border:1px solid rgba(232,150,15,.3)}
+  .band-img img{width:100%;height:100%;min-height:300px;object-fit:cover;display:block}
+
+  /* Broadcast + digital */
+  .combo{max-width:1140px;margin:0 auto;padding:72px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .combo h2{font-size:2rem;margin-bottom:16px}
+  .combo p{color:var(--muted);margin-bottom:14px}
+  .combo ul{list-style:none;margin-top:18px}
+  .combo li{padding:10px 0;border-bottom:1px solid #e4dccb;font-size:1rem}
+  .combo li::before{content:"▸ ";color:var(--amber-dark);font-weight:700}
+  .combo-art{position:relative;border-radius:14px;min-height:340px;overflow:hidden;color:#fff;box-shadow:0 14px 40px rgba(13,43,69,.25)}
+  .combo-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .combo-art blockquote{position:absolute;left:0;right:0;bottom:0;padding:56px 36px 28px;background:linear-gradient(transparent,rgba(6,20,35,.92));font-family:Georgia,serif;font-size:1.4rem;line-height:1.45}
+  .combo-art blockquote footer{margin-top:10px;font-family:inherit;font-size:.85rem;opacity:.75}
+
+  /* Acquisition callout */
+  .acquire{max-width:1140px;margin:0 auto;padding:0 24px 72px}
+  .acquire-card{background:#fff;border:1px solid #e7ddc8;border-left:6px solid var(--amber);border-radius:10px;padding:32px 34px;display:flex;gap:24px;align-items:flex-start;box-shadow:0 6px 22px rgba(13,43,69,.06)}
+  .badge{display:inline-block;background:var(--navy);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:12px}
+  .acquire-card h3{font-size:1.4rem;margin-bottom:8px}
+  .acquire-card p{color:var(--muted)}
+
+  /* Contact */
+  .contact{background:var(--navy-deep);color:#fff;text-align:center}
+  .contact-inner{max-width:720px;margin:0 auto;padding:80px 24px}
+  .contact h2{color:#fff;font-size:2.2rem;margin-bottom:14px}
+  .contact p{opacity:.85;margin-bottom:28px}
+  .contact a.email{font-size:1.4rem;color:var(--amber);text-decoration:none;font-weight:600}
+  .contact a.email:hover{text-decoration:underline}
+
+  footer{background:#061423;color:#8fa3b8;text-align:center;padding:26px 20px;font-size:.85rem}
+  footer p + p{margin-top:6px}
+
+  @media(max-width:900px){
+    .hero-inner,.band-inner,.combo{grid-template-columns:1fr}
+    .grid{grid-template-columns:1fr 1fr}
+    .hero h1{font-size:2.3rem}
+    .nav-links{gap:14px;font-size:.85rem}
+  }
+  @media(max-width:600px){
+    .grid{grid-template-columns:1fr}
+    .nav-links a:not(.btn){display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brand">Four Winds <span>Media</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">What We Do</a>
+      <a href="#tribal">Tribal Work</a>
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="kicker">Rural Broadcast &middot; Tribal Media &middot; Community First</div>
+      <h1>Bringing &ldquo;community&rdquo; back to local broadcast.</h1>
+      <p class="lede">We purchase and build TV and radio stations in rural markets — pairing broadcast visibility with digital, podcast, and social media to serve the communities we live in.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#contact">Get in Touch</a>
+        <a class="btn btn-outline" style="color:#fff !important;border-color:#fff" href="#services">What We Do</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="images/hero.jpg" alt="Radio broadcast tower silhouetted on a mountain ridge at dusk">
+    </div>
+  </div>
+</section>
+
+<section class="intro" id="about">
+  <h2>Local radio isn&rsquo;t disappearing. It&rsquo;s misunderstood.</h2>
+  <p>Up-close and personal communication has been lost to online interaction. <strong>Four Winds Media brings &ldquo;community&rdquo; back</strong> — supporting local heritage, music, and art through local radio and television, and staying highly visible in the communities we serve. It&rsquo;s in nearly every car and truck on the road. The old ways of radio simply haven&rsquo;t kept up with the incredible new opportunities available today — so we built a company around them.</p>
+</section>
+
+<section class="services" id="services">
+  <div class="section-head">
+    <h2>What We Do</h2>
+    <p>Every opportunity for exposure, brought together — broadcast, digital, events, and sponsorship — for the greatest success of each endeavor.</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">📻</div>
+      <h3>Station Acquisitions</h3>
+      <p>Through our subsidiaries, we purchase existing TV and radio stations in rural markets and invest in their future.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>Tribal Station Operations</h3>
+      <p>We build and oversee brand-new station operations for Native American tribes across the United States.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🎙️</div>
+      <h3>Original Content</h3>
+      <p>Highly original, innovative new programming produced for broadcast, digital, and social media platforms.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🎶</div>
+      <h3>Events &amp; Promotions</h3>
+      <p>Special events, concerts, and market-specific promotions that go far beyond straight spot advertising.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📣</div>
+      <h3>Sponsorship Packages</h3>
+      <p>Large marketing and sponsorship packages combining every exposure opportunity — tailored to each advertiser&rsquo;s goals.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🏛️</div>
+      <h3>Grant Funding</h3>
+      <p>We aggressively pursue local, federal, and international grant funding for every project we take on.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="tribal">
+  <div class="band-inner">
+    <div class="band-img">
+      <img src="images/heritage.jpg" alt="Traditional hand drum resting on a woven textile in warm light">
+    </div>
+    <div>
+      <div class="kicker">Indigenous Partnerships</div>
+      <h2>Preserving heritage on the air.</h2>
+      <p>Our work with Indigenous tribes throughout the U.S. is designed to educate and preserve the rich histories, cultures, and languages of each tribe — heritage that is sadly facing extinction in many cases.</p>
+      <p>Four Winds Media has brought together experienced, well-known personalities and executives to oversee daily operations and carry this mission forward.</p>
+    </div>
+  </div>
+</section>
+
+<section class="combo">
+  <div>
+    <h2>Broadcast reach, modern playbook.</h2>
+    <p>The old ways of radio have not kept up with the incredible new opportunities available today. We combine broadcast visibility with everything modern audiences expect:</p>
+    <ul>
+      <li>Digital &amp; social media marketing</li>
+      <li>Podcast production &amp; distribution</li>
+      <li>Membership programs</li>
+      <li>Event marketing &amp; onsite promotions</li>
+      <li>Sponsor campaigns built around your goals</li>
+    </ul>
+  </div>
+  <div class="combo-art">
+    <img src="images/concert.jpg" alt="Small-town outdoor concert at dusk under string lights">
+    <blockquote>
+      &ldquo;It&rsquo;s in nearly every car and truck on the road.&rdquo;
+      <footer>— On the power of local radio</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="acquire">
+  <div class="acquire-card">
+    <div>
+      <span class="badge">Here&rsquo;s what&rsquo;s coming next</span>
+      <h3>Cherokee Broadcasting Company — Murphy, North Carolina</h3>
+      <p>Four Winds Media is awaiting final FCC approval for the purchase of Cherokee Broadcasting Company: three local stations — two FM and one AM — serving the Murphy, NC community.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="kicker">Work With Us</div>
+    <h2>Let&rsquo;s talk about your community.</h2>
+    <p>Stations, sponsorships, tribal partnerships, or grant-funded projects — we&rsquo;d love to hear from you.</p>
+    <!-- PENDING: Dee confirming domain + email -->
+    <a class="email" href="mailto:info@4windsmedia.com">info@4windsmedia.com</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Four Winds Media. All rights reserved.</p>
+  <p>Bringing &ldquo;community&rdquo; back through local broadcast.</p>
+</footer>
+
+</body>
+</html>
