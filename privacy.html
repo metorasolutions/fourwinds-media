@@ -158,7 +158,8 @@
   /* Simple header for legal pages */
   .page-header{background:var(--navy);padding:18px 24px;position:sticky;top:0;z-index:50}
   .page-header .wrap{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-  .page-header .brand{color:#fff;font-weight:700;font-size:1.15rem;text-decoration:none}
+  .page-header .brand{color:#fff;font-weight:700;font-size:1.15rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+  .page-header .brand-mark{width:28px;height:28px}
   .page-header nav{display:flex;gap:22px}
   .page-header nav a{color:#fff;text-decoration:none;font-size:.95rem;opacity:.85}
   .page-header nav a:hover{opacity:1;color:var(--amber)}
@@ -167,7 +168,7 @@
 <body>
 <header class="page-header">
   <div class="wrap">
-    <a href="index.html" class="brand">4Winds Media</a>
+    <a href="index.html" class="brand"><img src="images/favicon-amber.png" alt="4Winds Media logo" class="brand-mark">4Winds Media</a>
     <nav><a href="index.html#what">What We Do</a><a href="index.html#where">Where We Are</a><a href="index.html#contact">Contact</a></nav>
   </div>
 </header>
